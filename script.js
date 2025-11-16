@@ -7,6 +7,26 @@ const scoreEl = document.getElementById('score');
 const healthFill = document.getElementById('health-fill');
 const healthText = document.getElementById('health-text');
 const restartBtn = document.getElementById('restart');
+const shootUpBtn = document.getElementById('shoot-up');
+const shootDownBtn = document.getElementById('shoot-down');
+const shootLeftBtn = document.getElementById('shoot-left');
+const shootRightBtn = document.getElementById('shoot-right');
+
+shootUpBtn.addEventListener('click', () => {
+  bullets.push({ x: player.x, y: player.y, dx: 0, dy: -10, size: 5, life: 100 });
+});
+
+shootDownBtn.addEventListener('click', () => {
+  bullets.push({ x: player.x, y: player.y, dx: 0, dy: 10, size: 5, life: 100 });
+});
+
+shootLeftBtn.addEventListener('click', () => {
+  bullets.push({ x: player.x, y: player.y, dx: -10, dy: 0, size: 5, life: 100 });
+});
+
+shootRightBtn.addEventListener('click', () => {
+  bullets.push({ x: player.x, y: player.y, dx: 10, dy: 0, size: 5, life: 100 });
+});
 
 let player = { x: 400, y: 300, size: 20, speed: 5, health: 100, maxHealth: 100 };
 let bullets = [], enemies = [], particles = [];
@@ -345,3 +365,4 @@ restartBtn.addEventListener('click', () => {
 // --- Initialize ---
 updateHealthBar();
 gameLoop();
+
