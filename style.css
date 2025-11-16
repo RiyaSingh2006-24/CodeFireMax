@@ -102,3 +102,28 @@ footer {
   margin-top: auto;
   font-size: 0.9em;
 }
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#controls button {
+  flex: 1 1 40%;
+  padding: 15px;
+  font-size: 1.2em;
+  background: linear-gradient(135deg, #ff6600, #cc3300);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+#controls button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 100, 0, 0.7);
+}
+
