@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooting Game with AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Shooting Game with AI</h1>
+  </header>
+
+  <main>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <section id="ui">
+      <p>
+        Mode: <span id="mode">Levels</span> | 
+        Level: <span id="level">1</span> | 
+        Kills to Next: <span id="kills-to-next">10</span>
+      </p>
+      <p>Score: <span id="score">0</span></p>
+
+      <div id="health-bar">
+        <div id="health-fill"></div>
+        <span id="health-text">100/100</span>
+      </div>
+
+      <button id="restart" type="button">Restart Game</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Gaming Site. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

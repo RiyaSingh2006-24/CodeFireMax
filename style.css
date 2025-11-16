@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #1a1a1a, #222, #111, #333);
+  background-size: 400% 400%;
+  animation: bgAnimation 15s ease infinite;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  touch-action: none;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(51, 51, 51, 0.9);
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+#gameCanvas {
+  border: 2px solid #666;
+  background-color: #000;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+#ui {
+  margin-top: 10px;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+#health-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 10px;
+  position: relative;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+#health-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f0, #6f6);
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(0,255,0,0.7);
+}
+
+#health-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9em;
+  color: #fff;
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,123,255,0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.9);
+  width: 100%;
+  margin-top: auto;
+  font-size: 0.9em;
+}
